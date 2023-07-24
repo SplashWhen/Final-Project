@@ -1,0 +1,364 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding-top: 47.5px;
+}
+header .s1 {
+  align-items: center;
+  display: flex;
+}
+header .s1 h1 {
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: 130px;
+  padding-right: 25px;
+}
+header .s2 {
+  padding-left: 251px;
+}
+header .s2 ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 840px;
+}
+header .s2 ul li {
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+header .s2 ul button {
+  background-clip: padding-box;
+  background-color: #ffca42;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  transition: all 250ms;
+}
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+}
+header .s2 ul button:hover {
+  animation: bounce 1s;
+}
+
+body {
+  background-color: #1b3764;
+}
+
+main {
+  padding-left: 130px;
+}
+main .s1 {
+  vertical-align: middle;
+  float: left;
+}
+main .s1 h1 {
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  padding-top: 150px;
+  padding-bottom: 32px;
+  padding-right: 95px;
+}
+main .s1 p {
+  color: #f6f8fc;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  width: 575px;
+  height: 62px;
+  line-height: 34px;
+  padding-bottom: 100px;
+}
+main .s1 button {
+  background-color: #ffca42;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  transition: all 250ms;
+}
+main .rusideda {
+  padding-top: 60px;
+  width: 569px;
+  height: 600px;
+  flex-shrink: 0;
+}
+main .s2 {
+  padding-top: 200px;
+  display: flex;
+}
+main .s2 img {
+  box-shadow: 40px 40px #ffca42;
+}
+main .s2 div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+main .s2 div h1 {
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  padding-top: 60px;
+}
+main .s2 div p {
+  color: #f6f8fc;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  width: 567px;
+  height: 128px;
+  padding-top: 22px;
+}
+main .s2 div .yellow-line {
+  width: 0px;
+  height: 3px;
+  background: #ffca42;
+  margin-top: 22px;
+}
+main .s3 {
+  padding-top: 250px;
+}
+main .s3 h1 {
+  color: #ffca42;
+  text-align: center;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  padding-right: 80px;
+}
+main .s3 .yellow-line {
+  width: 50px;
+  height: 3px;
+  background: #ffca42;
+  margin: 0 629px;
+  margin-top: 22px;
+}
+main .s3 .main-div {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+main .s3 .main-div div {
+  width: 630px;
+  height: 250px;
+  background: #4d4a4a;
+  box-shadow: 0px 35px 25px 0px rgba(4, 113, 255, 0.04);
+}
+main .s3 .main-div h2 {
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 48px;
+  padding-left: 54px;
+}
+main .s3 .main-div p {
+  width: 560px;
+  height: 60px;
+  color: #f6f8fc;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  padding-top: 14px;
+  padding-left: 54px;
+  line-height: 34px;
+}
+main .s3 .main-div ul {
+  list-style-type: disc;
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 22px;
+  display: flex;
+  padding-left: 72px;
+  padding-top: 35px;
+}
+main .s3 .main-div .li1 {
+  margin-right: 50px;
+}
+main .s4 {
+  padding-top: 250px;
+}
+main .s4 h1 {
+  color: #ffca42;
+  text-align: center;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  padding-right: 80px;
+}
+main .s4 .yellow-line {
+  width: 50px;
+  height: 3px;
+  background: #ffca42;
+  margin: 0 629px;
+  margin-top: 22px;
+}
+main .s4 .spotify {
+  padding-top: 30px;
+  margin-left: -80px;
+  display: flex;
+}
+main .s4 .spotify-embed {
+  padding-right: 30px;
+}/*# sourceMappingURL=global.css.map */
