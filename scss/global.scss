@@ -103,7 +103,7 @@ header {
         }
 
         &:nth-child(3) a:before {
-          background: #fccc63;
+          background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
         }
 
         &:nth-child(4) a:before {
@@ -404,11 +404,13 @@ main {
     h1 {
       @include h1;
       color: #1b3764;
+      margin-right: 100px;
     }
 
     .yellow-line {
       @include yellow-line;
       background: #1b3764;
+      margin-left: 630px;
     }
 
     .main-div {
@@ -462,7 +464,6 @@ main {
 
   .s5 {
     background: #1b3764;
-    padding-left: 100px;
     padding-top: 100px;
     padding-bottom: 100px;
     h1 {
@@ -475,7 +476,6 @@ main {
 
     .spotify {
       padding-top: 30px;
-      margin-left: -120px;
       display: flex;
       justify-content: space-around;
     }
@@ -621,5 +621,9 @@ footer {
     font-style: normal;
     font-weight: 400;
     display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
