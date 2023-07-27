@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -129,6 +130,9 @@ table {
   border-spacing: 0;
 }
 
+body {
+  width: 1920px;
+}
 body button {
   box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
   border-radius: 5px;
@@ -154,10 +158,12 @@ header {
   align-items: center;
   padding-top: 47.5px;
   background: #1b3764;
+  justify-content: center;
 }
 header .s1 {
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 header .s1 ul {
   display: flex;
@@ -224,6 +230,8 @@ header .s1 h1 {
 }
 header .s2 {
   padding-left: 200px;
+  display: flex;
+  justify-content: center;
 }
 header .s2 ul {
   display: flex;
@@ -263,10 +271,15 @@ header .s2 ul button {
   transition: all 250ms;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
 main .s1 {
   background: #1b3764;
-  padding-left: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
 }
 main .s1 .main-div {
   float: left;
@@ -311,10 +324,10 @@ main .s1 .rusideda {
   flex-shrink: 0;
 }
 main .s2 {
-  padding-top: 100px;
-  padding-left: 100px;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   display: flex;
+  justify-content: center;
   background: #f4f8ff;
 }
 main .s2 .border {
@@ -342,7 +355,6 @@ main .s2 .border img:hover {
   filter: grayscale(0);
 }
 main .s2 div {
-  display: flex;
   flex-direction: column;
   padding-left: 100px;
 }
@@ -370,9 +382,8 @@ main .s2 div .yellow-line {
   margin-top: 22px;
 }
 main .s3 {
-  padding-top: 40px;
-  padding-bottom: 800px;
-  padding-left: 131px;
+  padding-top: 149px;
+  padding-bottom: 174px;
   background: #1b3764;
 }
 main .s3 h1 {
@@ -390,16 +401,14 @@ main .s3 .yellow-line {
   margin-top: 22px;
 }
 main .s3 .border {
-  float: right;
-  position: relative;
   display: flex;
+  padding-top: 100px;
+  width: 650px;
+  height: 650px;
 }
 main .s3 .border img {
   z-index: 1;
-  height: 450px;
-  width: 450;
-  margin-right: 120px;
-  margin-top: 120px;
+  flex-shrink: 0;
   --color: #ffca42;
   --border: 10px;
   --offset: 20px;
@@ -419,13 +428,19 @@ main .s3 .border img:hover {
   background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
   filter: grayscale(0);
 }
+main .s3 .squares {
+  display: flex;
+  width: 590px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 main .s3 .main-div {
-  padding-top: 30px;
+  padding-top: 75px;
   flex-wrap: wrap;
   display: flex;
-  width: 600px;
-  float: left;
-  margin-left: 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 99px;
 }
 main .s3 .main-div p {
   color: #969aa0;
@@ -467,9 +482,10 @@ main .s3 .main-div button {
   width: 220px;
 }
 main .s4 {
-  padding-left: 100px;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background: #f4f8ff;
 }
 main .s4 h1 {
@@ -479,7 +495,6 @@ main .s4 h1 {
   font-size: 45px;
   font-weight: 700;
   color: #1b3764;
-  margin-right: 100px;
 }
 main .s4 .yellow-line {
   width: 50px;
@@ -488,12 +503,12 @@ main .s4 .yellow-line {
   margin: 0 auto;
   margin-top: 22px;
   background: #1b3764;
-  margin-left: 630px;
 }
 main .s4 .main-div {
   padding-top: 50px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
 }
@@ -535,8 +550,8 @@ main .s4 .main-div ul {
 }
 main .s5 {
   background: #1b3764;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 main .s5 h1 {
   color: #ffca42;
@@ -558,10 +573,11 @@ main .s5 .spotify {
   justify-content: space-around;
 }
 main .s6 {
-  padding-left: 100px;
   padding-top: 150px;
   padding-bottom: 150px;
   background: #f4f8ff;
+  display: flex;
+  justify-content: center;
 }
 main .s6 .main-div {
   display: flex;
@@ -625,6 +641,7 @@ footer {
   height: 400px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 footer img {
   width: 50%;
@@ -646,7 +663,7 @@ footer .box {
   border: 1px solid #ffca42;
 }
 footer ul {
-  padding-top: 40px;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
   padding-right: 90px;
@@ -661,25 +678,32 @@ footer li {
   gap: 10px;
   padding-top: 20px;
 }
-footer .span1 {
-  padding-top: 45px;
+footer .contact-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-footer span {
-  padding-top: 15px;
+footer .contact-div :nth-child(2)::before {
   color: #fff;
-  text-align: center;
-  font-family: "ALK Rounded Nusx Med", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  display: inline-block;
+  content: "მისამართი:";
+  padding-right: 10px;
+}
+footer .contact-div :nth-child(3)::before {
+  color: #fff;
+  content: "ელექტრონული ფოსტა:";
+  padding-right: 10px;
+}
+footer .contact-div :nth-child(4)::before {
+  color: #fff;
+  content: "ტელეფონი:";
+  padding-right: 10px;
 }
 footer p {
+  padding-top: 25px;
   color: #b4c7e7;
   font-family: "ALK Rounded Nusx Med", sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  display: inline-block;
 }
 footer a {
   text-decoration: none;

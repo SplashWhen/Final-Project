@@ -3,6 +3,7 @@
 @import "variables";
 
 body {
+  width: 1920px;
   button {
     -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
     -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
@@ -41,9 +42,11 @@ header {
   align-items: center;
   padding-top: 47.5px;
   background: #1b3764;
+  justify-content: center;
   .s1 {
     align-items: center;
     display: flex;
+    justify-content: center;
 
     ul {
       display: flex;
@@ -123,6 +126,8 @@ header {
   }
   .s2 {
     padding-left: 200px;
+    display: flex;
+    justify-content: center;
     ul {
       display: flex;
       justify-content: space-around;
@@ -167,10 +172,13 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   .s1 {
     background: #1b3764;
-    padding-left: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
 
     .main-div {
       float: left;
@@ -221,10 +229,10 @@ main {
   }
 
   .s2 {
-    padding-top: 100px;
-    padding-left: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     display: flex;
+    justify-content: center;
     background: #f4f8ff;
 
     .border {
@@ -260,7 +268,6 @@ main {
     }
 
     div {
-      display: flex;
       flex-direction: column;
       padding-left: 100px;
       h1 {
@@ -292,9 +299,8 @@ main {
   }
 
   .s3 {
-    padding-top: 40px;
-    padding-bottom: 800px;
-    padding-left: 131px;
+    padding-top: 149px;
+    padding-bottom: 174px;
     background: #1b3764;
 
     h1 {
@@ -306,16 +312,14 @@ main {
     }
 
     .border {
-      float: right;
-      position: relative;
       display: flex;
+      padding-top: 100px;
+      width: 650px;
+      height: 650px;
 
       img {
         z-index: 1;
-        height: 450px;
-        width: 450;
-        margin-right: 120px;
-        margin-top: 120px;
+        flex-shrink: 0;
         --color: #ffca42;
         --border: 10px;
         --offset: 20px;
@@ -343,14 +347,20 @@ main {
       }
     }
 
+    .squares {
+      display: flex;
+      width: 590px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .main-div {
-      padding-top: 30px;
+      padding-top: 75px;
       flex-wrap: wrap;
       display: flex;
-      width: 600px;
-      float: left;
-      margin-left: 80px;
-
+      justify-content: center;
+      align-items: center;
+      gap: 99px;
       p {
         color: $secondary-text-color;
         font-family: $main-font;
@@ -397,26 +407,26 @@ main {
   }
 
   .s4 {
-    padding-left: 100px;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 150px;
     background: #f4f8ff;
     h1 {
       @include h1;
       color: #1b3764;
-      margin-right: 100px;
     }
 
     .yellow-line {
       @include yellow-line;
       background: #1b3764;
-      margin-left: 630px;
     }
 
     .main-div {
       padding-top: 50px;
       display: flex;
       flex-direction: row;
+      justify-content: center;
       gap: 50px;
       flex-wrap: wrap;
 
@@ -464,8 +474,8 @@ main {
 
   .s5 {
     background: #1b3764;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     h1 {
       @include h1;
     }
@@ -482,10 +492,11 @@ main {
   }
 
   .s6 {
-    padding-left: 100px;
     padding-top: 150px;
     padding-bottom: 150px;
     background: #f4f8ff;
+    display: flex;
+    justify-content: center;
     .main-div {
       display: flex;
       flex-direction: column;
@@ -558,6 +569,7 @@ footer {
   height: 400px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   img {
     width: 50%;
@@ -583,7 +595,7 @@ footer {
   }
 
   ul {
-    padding-top: 40px;
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     padding-right: 90px;
@@ -600,27 +612,36 @@ footer {
     padding-top: 20px;
   }
 
-  .span1 {
-    padding-top: 45px;
-  }
+  .contact-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
-  span {
-    padding-top: 15px;
-    color: #fff;
-    text-align: center;
-    font-family: $main-font;
-    font-size: 18px;
-    font-weight: 700;
-    display: inline-block;
+    & :nth-child(2)::before {
+      color: #fff;
+      content: "მისამართი:";
+      padding-right: 10px;
+    }
+
+    & :nth-child(3)::before {
+      color: #fff;
+      content: "ელექტრონული ფოსტა:";
+      padding-right: 10px;
+    }
+
+    & :nth-child(4)::before {
+      color: #fff;
+      content: "ტელეფონი:";
+      padding-right: 10px;
+    }
   }
 
   p {
+    padding-top: 25px;
     color: #b4c7e7;
     font-family: $main-font;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
-    display: inline-block;
   }
 
   a {
