@@ -129,6 +129,26 @@ table {
   border-spacing: 0;
 }
 
+body button {
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  border-radius: 5px;
+}
+body button:active {
+  top: 10px;
+  background-color: #ffca42;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+}
+body button::after {
+  content: "";
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  border-radius: 5px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -139,16 +159,71 @@ header .s1 {
   align-items: center;
   display: flex;
 }
+header .s1 ul {
+  display: flex;
+}
+header .s1 ul li a {
+  display: flex;
+  width: 40px;
+  height: 35px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  margin: 0 3px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+header .s1 ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+header .s1 ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+header .s1 ul li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+header .s1 ul li a:hover::before {
+  top: 0;
+}
+header .s1 ul li:nth-child(1) a:before {
+  background: #3b5999;
+}
+header .s1 ul li:nth-child(2) a:before {
+  background: #ff0000;
+}
+header .s1 ul li:nth-child(3) a:before {
+  background: #fccc63;
+}
+header .s1 ul li:nth-child(4) a:before {
+  background: #1db954;
+}
 header .s1 h1 {
   color: #fff;
   font-family: "ALK Rounded Nusx Med", sans-serif;
   font-size: 28px;
   font-weight: 700;
-  padding-left: 130px;
-  padding-right: 25px;
+  padding-left: 100px;
+  padding-right: 15px;
 }
 header .s2 {
-  padding-left: 251px;
+  padding-left: 200px;
 }
 header .s2 ul {
   display: flex;
@@ -161,6 +236,17 @@ header .s2 ul li {
   font-family: "ALK Rounded Nusx Med", sans-serif;
   font-size: 17px;
   font-weight: 500;
+  --c: linear-gradient(#ffca42 0 0); /* update the color here */
+  padding-bottom: 10px;
+  background: var(--c), var(--c);
+  background-size: 0.3em 0.1em;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  transition: 0.3s linear, background-size 0.3s 0.2s linear;
+}
+header .s2 ul li:hover {
+  background-size: 40% 0.1em;
+  background-position: 10% 100%, 90% 100%;
 }
 header .s2 ul button {
   background-clip: padding-box;
@@ -176,24 +262,10 @@ header .s2 ul button {
   padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
   transition: all 250ms;
 }
-@keyframes bounce {
-  0%, 20%, 60%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-}
-header .s2 ul button:hover {
-  animation: bounce 1s;
-}
 
 main .s1 {
   background: #1b3764;
-  padding-left: 131px;
+  padding-left: 100px;
   padding-bottom: 50px;
 }
 main .s1 .main-div {
@@ -240,29 +312,34 @@ main .s1 .rusideda {
 }
 main .s2 {
   padding-top: 100px;
-  padding-left: 131px;
+  padding-left: 100px;
   padding-bottom: 100px;
   display: flex;
   background: #f4f8ff;
 }
 main .s2 .border {
-  width: 640px;
-  height: 640px;
-  position: relative;
+  width: 650px;
+  height: 650px;
 }
 main .s2 .border img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  --color: #ffca42;
+  --border: 10px;
+  --offset: 20px;
+  --gap: 5px;
+  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),
+    var(--color) 0;
+  --_o: calc(3 * var(--offset));
+  padding: calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
+  background: linear-gradient(var(--_c)) var(--_o) var(--_o), linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+  background-repeat: no-repeat;
+  filter: grayscale(0.4);
+  transition: 0.5s;
 }
-main .s2 .border div {
-  position: absolute;
-  left: 40px;
-  top: 40px;
-  height: 620px;
-  width: 530px;
-  border: 10px solid #ffca42;
+main .s2 .border img:hover {
+  background-position: 0px 0px;
+  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+  filter: grayscale(0);
 }
 main .s2 div {
   display: flex;
@@ -322,16 +399,26 @@ main .s3 .border img {
   z-index: 1;
   height: 450px;
   width: 450;
-  margin-right: 220px;
-  margin-top: 160px;
+  margin-right: 120px;
+  margin-top: 120px;
+  --color: #ffca42;
+  --border: 10px;
+  --offset: 20px;
+  --gap: 5px;
+  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),
+    var(--color) 0;
+  --_o: calc(3 * var(--offset));
+  padding: calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
+  background: linear-gradient(var(--_c)) var(--_o) var(--_o), linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+  background-repeat: no-repeat;
+  filter: grayscale(0.4);
+  transition: 0.5s;
 }
-main .s3 .border div {
-  position: absolute;
-  left: 40px;
-  top: 190px;
-  height: 435px;
-  width: 430px;
-  border: 10px solid #ffca42;
+main .s3 .border img:hover {
+  background-position: 0px 0px;
+  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+  filter: grayscale(0);
 }
 main .s3 .main-div {
   padding-top: 30px;
@@ -381,7 +468,7 @@ main .s3 .main-div button {
   width: 220px;
 }
 main .s4 {
-  padding-left: 131px;
+  padding-left: 100px;
   padding-top: 50px;
   padding-bottom: 100px;
   background: #f4f8ff;
@@ -448,7 +535,7 @@ main .s4 .main-div ul {
 }
 main .s5 {
   background: #1b3764;
-  padding-left: 131px;
+  padding-left: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -474,7 +561,7 @@ main .s5 .spotify {
   justify-content: space-around;
 }
 main .s6 {
-  padding-left: 131px;
+  padding-left: 100px;
   padding-top: 150px;
   padding-bottom: 150px;
   background: #f4f8ff;
@@ -535,7 +622,7 @@ main .s6 .main-div input:focus {
 }
 
 footer {
-  padding-left: 131px;
+  padding-left: 100px;
   padding-top: 150px;
   background-color: #1b3764;
   height: 400px;
