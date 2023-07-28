@@ -130,9 +130,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  width: auto;
-}
 body button {
   box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
   border-radius: 5px;
@@ -158,15 +155,24 @@ header {
   align-items: center;
   padding-top: 47.5px;
   background: #1b3764;
-  justify-content: center;
+  justify-content: space-around;
+}
+@media (max-width: 1024px) {
+  header {
+    justify-content: space-around;
+  }
 }
 header .s1 {
   align-items: center;
   display: flex;
-  justify-content: center;
 }
 header .s1 ul {
   display: flex;
+}
+@media (max-width: 1024px) {
+  header .s1 ul {
+    display: none;
+  }
 }
 header .s1 ul li a {
   display: flex;
@@ -225,19 +231,16 @@ header .s1 h1 {
   font-family: "ALK Rounded Nusx Med", sans-serif;
   font-size: 28px;
   font-weight: 700;
-  padding-left: 100px;
   padding-right: 15px;
 }
 header .s2 {
-  padding-left: 200px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 header .s2 ul {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  width: 840px;
+  gap: 40px;
 }
 header .s2 ul li {
   color: #fff;
@@ -317,24 +320,28 @@ main .s1 button {
   padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
   transition: all 250ms;
 }
-main .s1 .rusideda {
+main .s1 img {
   padding-top: 60px;
-  width: 569px;
-  height: 600px;
-  flex-shrink: 0;
+}
+@media (max-width: 1024px) {
+  main .s1 img {
+    display: none;
+  }
 }
 main .s2 {
   padding-top: 150px;
   padding-bottom: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background: #f4f8ff;
 }
-main .s2 .border {
-  width: 650px;
-  height: 650px;
+@media (max-width: 1024px) {
+  main .s2 {
+    justify-content: center;
+  }
 }
-main .s2 .border img {
+main .s2 img {
+  margin-right: 35px;
   --color: #ffca42;
   --border: 10px;
   --offset: 20px;
@@ -349,21 +356,34 @@ main .s2 .border img {
   filter: grayscale(0.4);
   transition: 0.5s;
 }
-main .s2 .border img:hover {
+@media (max-width: 1024px) {
+  main .s2 img {
+    display: none;
+  }
+}
+main .s2 img:hover {
   background-position: 0px 0px;
   background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
   filter: grayscale(0);
 }
 main .s2 div {
-  flex-direction: column;
-  padding-left: 100px;
+  margin-top: 60px;
+}
+@media (max-width: 1024px) {
+  main .s2 div {
+    width: 900px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -30px;
+  }
 }
 main .s2 div h1 {
   color: #1b3764;
   font-family: "ALK Rounded Nusx Med", sans-serif;
   font-size: 45px;
   font-weight: 700;
-  padding-top: 60px;
 }
 main .s2 div p {
   color: #969aa0;
@@ -371,8 +391,6 @@ main .s2 div p {
   font-size: 19px;
   font-weight: 400;
   line-height: 25px;
-  width: 530px;
-  height: 128px;
   padding-top: 22px;
 }
 main .s2 div .yellow-line {
@@ -400,13 +418,10 @@ main .s3 .yellow-line {
   margin: 0 auto;
   margin-top: 22px;
 }
-main .s3 .border {
-  display: flex;
-  padding-top: 100px;
-  width: 650px;
+main .s3 img {
   height: 650px;
-}
-main .s3 .border img {
+  width: 650px;
+  padding-top: 100px;
   z-index: 1;
   flex-shrink: 0;
   --color: #ffca42;
@@ -423,7 +438,12 @@ main .s3 .border img {
   filter: grayscale(0.4);
   transition: 0.5s;
 }
-main .s3 .border img:hover {
+@media (max-width: 1024px) {
+  main .s3 img {
+    display: none;
+  }
+}
+main .s3 img:hover {
   background-position: 0px 0px;
   background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
   filter: grayscale(0);
@@ -527,8 +547,6 @@ main .s4 .main-div h2 {
   padding-left: 54px;
 }
 main .s4 .main-div p {
-  width: 560px;
-  height: 60px;
   color: #969aa0;
   font-family: "ALK Rounded Nusx Med", sans-serif;
   font-size: 19px;
@@ -536,6 +554,7 @@ main .s4 .main-div p {
   padding-top: 14px;
   padding-left: 54px;
   line-height: 34px;
+  padding-right: 30px;
 }
 main .s4 .main-div ul {
   list-style-type: disc;
@@ -546,7 +565,7 @@ main .s4 .main-div ul {
   padding-left: 72px;
   padding-top: 35px;
   justify-content: space-between;
-  width: 510px;
+  margin-right: 30px;
 }
 main .s5 {
   background: #1b3764;
@@ -582,8 +601,7 @@ main .s6 {
 main .s6 .main-div {
   display: flex;
   flex-direction: column;
-  width: 850px;
-  padding: 121px 230px;
+  padding: 80px 75px;
   align-items: center;
   background-color: #ffca42;
 }
@@ -635,16 +653,31 @@ main .s6 .main-div input:focus {
 }
 
 footer {
-  padding-left: 100px;
   padding-top: 150px;
   background-color: #1b3764;
   height: 400px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+}
+@media (max-width: 1024px) {
+  footer {
+    padding-left: 10px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  footer svg {
+    display: none;
+  }
 }
 footer img {
-  width: 50%;
+  width: 213px;
+}
+@media (max-width: 1024px) {
+  footer img {
+    padding-right: 10px;
+  }
 }
 footer h3 {
   color: #fff;
@@ -653,20 +686,35 @@ footer h3 {
   font-style: normal;
   font-weight: 700;
 }
+@media (max-width: 1024px) {
+  footer h3 {
+    padding-right: 25px;
+  }
+}
 footer .social-media {
   padding-top: 30px;
-  width: 300px;
+  width: auto;
+  gap: 10px;
+  display: flex;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  footer .social-media {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 footer .box {
   background: #1b3764;
-  padding: 25px 15px;
+  width: 55px;
+  height: 55px;
   border: 1px solid #ffca42;
+  line-height: 50px;
 }
 footer ul {
   padding-top: 25px;
   display: flex;
   flex-direction: column;
-  padding-right: 90px;
 }
 footer li {
   color: #b4c7e7;
