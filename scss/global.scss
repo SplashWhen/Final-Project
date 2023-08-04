@@ -763,12 +763,18 @@ footer {
   }
 
   .secondary-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1000px;
+
     @media (max-width: 480px) {
       display: flex;
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
       gap: 100px;
+      width: auto;
     }
   }
 

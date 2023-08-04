@@ -881,6 +881,12 @@ footer svg {
     align-items: center;
   }
 }
+footer .secondary-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1000px;
+}
 @media (max-width: 480px) {
   footer .secondary-div {
     display: flex;
@@ -888,6 +894,7 @@ footer svg {
     justify-content: center;
     flex-wrap: wrap;
     gap: 100px;
+    width: auto;
   }
 }
 footer img {
