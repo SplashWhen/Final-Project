@@ -2,7 +2,30 @@
 @import "mixin";
 @import "variables";
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $text-color;
+  border: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 20px;
+  border: 6px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  a {
+    text-decoration: none;
+  }
+
   button {
     -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
     -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
@@ -43,9 +66,10 @@ header {
   background: #1b3764;
   justify-content: space-around;
 
-  @media (max-width: 1024px) {
-    justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
+
   .s1 {
     align-items: center;
     display: flex;
@@ -55,6 +79,7 @@ header {
       @media (max-width: 1024px) {
         display: none;
       }
+
       li a {
         display: flex;
         width: 40px;
@@ -64,12 +89,12 @@ header {
         line-height: 40px;
         font-size: 30px;
         margin: 0 3px;
-        display: block;
         border-radius: 50%;
         position: relative;
         overflow: hidden;
         border: 3px solid #fff;
         z-index: 1;
+        display: block;
 
         .icon {
           position: relative;
@@ -125,6 +150,10 @@ header {
       font-size: 28px;
       font-weight: 700;
       padding-right: 15px;
+
+      @media (max-width: 768px) {
+        padding-bottom: 30px;
+      }
     }
   }
   .s2 {
@@ -134,6 +163,18 @@ header {
       display: flex;
       align-items: center;
       gap: 40px;
+
+      @media (max-width: 768px) {
+        gap: 20px;
+      }
+
+      @media (max-width: 480px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 475px;
+        gap: 15px;
+      }
+
       li {
         color: $header-color;
         font-family: $main-font;
@@ -179,11 +220,21 @@ main {
     background: #1b3764;
     padding-bottom: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      flex-direction: column-reverse;
+    }
 
     .main-div {
-      float: left;
-      vertical-align: middle;
+      padding-left: 20px;
+
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     h1 {
@@ -191,9 +242,14 @@ main {
       font-family: $main-font;
       font-size: 65px;
       font-weight: 700;
-      padding-top: 150px;
       padding-bottom: 32px;
-      padding-right: 95px;
+      @media (max-width: 1024px) {
+        padding-top: 30px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 40px;
+      }
     }
 
     p {
@@ -201,10 +257,19 @@ main {
       font-family: $main-font;
       font-size: 19px;
       font-weight: 400;
-      width: 575px;
+      width: 700px;
       height: 62px;
       line-height: 34px;
       padding-bottom: 100px;
+
+      @media (max-width: 1024px) {
+        width: 600px;
+      }
+
+      @media (max-width: 480px) {
+        width: 440px;
+        padding-bottom: 150px;
+      }
     }
 
     button {
@@ -223,8 +288,8 @@ main {
 
     img {
       padding-top: 60px;
-      @media (max-width: 1024px) {
-        display: none;
+      @media (max-width: 480px) {
+        width: 450px;
       }
     }
   }
@@ -235,14 +300,17 @@ main {
     display: flex;
     justify-content: space-around;
     background: #f4f8ff;
+    align-items: flex-start;
 
     @media (max-width: 1024px) {
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
 
     img {
-      @media (max-width: 1024px) {
-        display: none;
+      @media (max-width: 480px) {
+        width: 410px;
+        margin-right: 0px;
       }
       margin-right: 35px;
       --color: #ffca42;
@@ -279,13 +347,19 @@ main {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: -30px;
+      }
+
+      @media (max-width: 768px) {
+        width: 700px;
       }
       h1 {
         color: $text-on-blue;
         font-family: $main-font;
         font-size: 45px;
         font-weight: 700;
+        @media (max-width: 480px) {
+          font-size: 40px;
+        }
       }
 
       p {
@@ -295,6 +369,9 @@ main {
         font-weight: 400;
         line-height: 25px;
         padding-top: 22px;
+        @media (max-width: 480px) {
+          width: 460px;
+        }
       }
 
       .yellow-line {
@@ -307,12 +384,18 @@ main {
   }
 
   .s3 {
-    padding-top: 149px;
-    padding-bottom: 174px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     background: #1b3764;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
     h1 {
       @include h1;
+      @media (max-width: 480px) {
+        font-size: 40px;
+      }
     }
 
     .yellow-line {
@@ -321,7 +404,12 @@ main {
 
     img {
       @media (max-width: 1024px) {
-        display: none;
+        margin-left: 35px;
+      }
+      @media (max-width: 480px) {
+        width: 410px;
+        height: 410px;
+        margin-left: 0px;
       }
       height: 650px;
       width: 650px;
@@ -359,6 +447,11 @@ main {
       width: 590px;
       flex-wrap: wrap;
       gap: 10px;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     .main-div {
@@ -368,6 +461,10 @@ main {
       justify-content: center;
       align-items: center;
       gap: 99px;
+
+      @media (max-width: 480px) {
+        width: 480px;
+      }
       p {
         color: $secondary-text-color;
         font-family: $main-font;
@@ -422,6 +519,9 @@ main {
     h1 {
       @include h1;
       color: #1b3764;
+      @media (max-width: 480px) {
+        font-size: 40px;
+      }
     }
 
     .yellow-line {
@@ -451,6 +551,10 @@ main {
         font-weight: 700;
         padding-top: 48px;
         padding-left: 54px;
+        @media (max-width: 480px) {
+          font-size: 20px;
+          padding-left: 30px;
+        }
       }
 
       p {
@@ -462,6 +566,10 @@ main {
         padding-left: 54px;
         line-height: 34px;
         padding-right: 30px;
+        @media (max-width: 480px) {
+          font-size: 15px;
+          padding-left: 30px;
+        }
       }
 
       ul {
@@ -474,6 +582,11 @@ main {
         padding-top: 35px;
         justify-content: space-between;
         margin-right: 30px;
+        @media (max-width: 480px) {
+          font-size: 15px;
+          padding-left: 48px;
+          padding-top: 20px;
+        }
       }
     }
   }
@@ -494,6 +607,14 @@ main {
       padding-top: 30px;
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    iframe {
+      @media (max-width: 768px) {
+        width: 45%;
+        padding-bottom: 30px;
+      }
     }
   }
 
@@ -503,6 +624,7 @@ main {
     background: #f4f8ff;
     display: flex;
     justify-content: center;
+
     .main-div {
       display: flex;
       flex-direction: column;
@@ -510,11 +632,24 @@ main {
       align-items: center;
       background-color: #ffca42;
 
+      @media (max-width: 480px) {
+        width: 330px;
+      }
+
       h2 {
         color: $header-color;
         font-family: $main-font;
         font-size: 40px;
         font-weight: 700;
+
+        @media (max-width: 768px) {
+          font-size: 30px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 21px;
+          width: 430px;
+        }
       }
 
       p {
@@ -523,6 +658,11 @@ main {
         font-size: 19px;
         font-weight: 400;
         padding-top: 20px;
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+          width: 440px;
+        }
       }
 
       .line {
@@ -535,6 +675,10 @@ main {
       form {
         padding-top: 40px;
 
+        @media (max-width: 480px) {
+          padding-top: 15px;
+        }
+
         button {
           background-color: $main-color;
           color: #fff;
@@ -544,6 +688,14 @@ main {
           font-weight: 600;
           width: 300px;
           height: 65px;
+
+          @media (max-width: 768px) {
+            margin-left: 150px;
+          }
+
+          @media (max-width: 480px) {
+            margin-left: 75px;
+          }
         }
       }
 
@@ -562,34 +714,81 @@ main {
         &:focus {
           border: 3px solid #555;
         }
+
+        @media (max-width: 768px) {
+          width: 600px;
+        }
+
+        @media (max-width: 480px) {
+          width: 450px;
+        }
       }
     }
   }
 }
 
 footer {
-  padding-top: 150px;
+  padding-top: 80px;
   background-color: #1b3764;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 
   @media (max-width: 1024px) {
     padding-left: 10px;
-    justify-content: center;
+    height: 400px;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    padding-top: 0px;
   }
 
   svg {
     @media (max-width: 1024px) {
       display: none;
     }
+    padding-right: 10px;
+  }
+
+  .main-div {
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .secondary-div {
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 100px;
+    }
   }
 
   img {
     width: 213px;
     @media (max-width: 1024px) {
-      padding-right: 10px;
+      padding-right: 30px;
+      object-fit: cover;
+      object-position: left 80%;
+      width: 75px;
+      height: 70px;
+      transform: translateX(-9px);
+    }
+
+    @media (max-width: 480px) {
+      object-position: left 0%;
+      transform: translateX(0px);
+      width: 250px;
+      height: auto;
+      padding-right: 0px;
     }
   }
 
@@ -602,6 +801,11 @@ footer {
     @media (max-width: 1024px) {
       padding-right: 25px;
     }
+
+    @media (max-width: 480px) {
+      padding-right: 0px;
+      margin-top: -70px;
+    }
   }
 
   .social-media {
@@ -613,6 +817,11 @@ footer {
     @media (max-width: 1024px) {
       align-items: flex-start;
       flex-direction: column;
+      padding-top: 5px;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: row;
     }
   }
 
@@ -625,9 +834,13 @@ footer {
   }
 
   ul {
-    padding-top: 25px;
+    padding-top: 35px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 480px) {
+      padding-top: 5px;
+    }
   }
 
   li {
@@ -637,14 +850,26 @@ footer {
     font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding-top: 20px;
+    padding-top: 28px;
+
+    &:nth-child(1) {
+      padding-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding-top: 10px;
+    }
   }
 
   .contact-div {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    line-height: 30px;
+
+    h3 {
+      padding-bottom: 25px;
+    }
 
     & :nth-child(2)::before {
       color: #fff;
@@ -671,9 +896,9 @@ footer {
     font-family: $main-font;
     font-size: 18px;
     font-weight: 400;
-  }
 
-  a {
-    text-decoration: none;
+    @media (max-width: 480px) {
+      padding-top: 0px;
+    }
   }
 }
