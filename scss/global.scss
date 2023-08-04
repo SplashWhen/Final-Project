@@ -19,9 +19,18 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
   a {
     text-decoration: none;
   }
@@ -309,7 +318,7 @@ main {
 
     img {
       @media (max-width: 480px) {
-        width: 410px;
+        width: 370px;
         margin-right: 0px;
       }
       margin-right: 35px;
@@ -407,8 +416,8 @@ main {
         margin-left: 35px;
       }
       @media (max-width: 480px) {
-        width: 410px;
-        height: 410px;
+        width: 370px;
+        height: 370px;
         margin-left: 0px;
       }
       height: 650px;
@@ -613,6 +622,11 @@ main {
     iframe {
       @media (max-width: 768px) {
         width: 45%;
+        padding-bottom: 30px;
+      }
+
+      @media (max-width: 480px) {
+        width: 80%;
         padding-bottom: 30px;
       }
     }
