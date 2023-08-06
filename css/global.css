@@ -1058,6 +1058,195 @@ main .news-s1 span {
   font-size: 17px;
   font-weight: 400;
 }
+main .contact-s1 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 200px;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+}
+@media (max-width: 1024px) {
+  main .contact-s1 {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+main .contact-s1 h1 {
+  color: #1b3764;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+main .contact-s1 .yellow-line {
+  width: 50px;
+  height: 3px;
+  background: #ffca42;
+  margin: 0 auto;
+  margin-top: 22px;
+  margin: 0 0;
+}
+main .contact-s1 p {
+  color: #969aa0;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  width: 500px;
+  padding-top: 30px;
+}
+main .contact-s1 .secondary-div {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+main .contact-s1 .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background: #1b3764;
+  margin-right: 30px;
+}
+main .contact-s1 .third-div {
+  display: flex;
+  flex-direction: column;
+}
+main .contact-s1 h2 {
+  color: #1b3764;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+main .contact-s1 span {
+  color: #969aa0;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+main .contact-s1 input[type=text] {
+  width: 279px;
+  height: 60px;
+  border: 2px solid #dce1e9;
+  background: #fff;
+  color: #969aa0;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+@media (max-width: 1024px) {
+  main .contact-s1 input[type=text] {
+    margin-top: 40px;
+  }
+}
+main .contact-s1 input[name=phone] {
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  width: 589px;
+  height: 60px;
+  border: 2px solid #dce1e9;
+  background: #fff;
+  margin-top: 15px;
+}
+main .contact-s1 textarea {
+  width: 589px;
+  height: 220px;
+  border: 2px solid #dce1e9;
+  color: #969aa0;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  background: #fff;
+  margin-top: 15px;
+  resize: none;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+main .contact-s1 input[type=checkbox] {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #dce1e9;
+  background: #fff;
+  margin-left: -0.5px;
+  margin-top: 28px;
+  margin-right: 15px;
+  float: left;
+}
+main .contact-s1 button {
+  background-clip: padding-box;
+  background-color: #ffca42;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  transition: all 250ms;
+  margin-top: 40px;
+  margin-left: -40px;
+  width: 620px;
+  height: 60px;
+}
+main .contact-s2 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: #f5f8fc;
+}
+main .contact-s2 .main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .contact-s2 h1 {
+  color: #ffca42;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+main .contact-s2 .yellow-line {
+  width: 50px;
+  height: 3px;
+  background: #ffca42;
+  margin: 0 auto;
+}
+main .contact-s2 p {
+  color: #969aa0;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  padding-top: 30px;
+}
+@media (max-width: 768px) {
+  main .contact-s2 p {
+    width: 450px;
+  }
+}
+main .contact-s2 .secondary-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  justify-content: center;
+  width: 900px;
+  gap: 30px;
+  margin: 0 auto;
+}
+main .contact-s2 .third-div {
+  display: flex;
+  align-items: baseline;
+}
+main .contact-s2 i {
+  padding-right: 15px;
+}
 
 footer {
   padding-top: 80px;
