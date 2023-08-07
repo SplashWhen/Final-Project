@@ -876,6 +876,11 @@ main .services-s1 h1 {
   font-size: 65px;
   font-weight: 700;
 }
+@media (max-width: 480px) {
+  main .services-s1 h1 {
+    font-size: 55px;
+  }
+}
 main .services-s1 .yellow-line {
   width: 50px;
   height: 3px;
@@ -891,7 +896,14 @@ main .services-s1 p {
 }
 @media (max-width: 768px) {
   main .services-s1 p {
-    width: 450px;
+    width: 480px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  main .services-s1 p {
+    width: 440px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 480px) {
@@ -910,6 +922,11 @@ main .services-s2 .main-div {
   gap: 70px;
   justify-content: center;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  main .services-s2 .main-div {
+    gap: 30px;
+  }
 }
 main .services-s2 .secondary-div {
   display: inline-block;
@@ -1070,6 +1087,7 @@ main .contact-s1 {
   main .contact-s1 {
     flex-direction: column;
     justify-content: center;
+    padding-left: 15px;
   }
 }
 main .contact-s1 h1 {
@@ -1095,6 +1113,11 @@ main .contact-s1 p {
   font-weight: 400;
   width: 500px;
   padding-top: 30px;
+}
+@media (max-width: 480px) {
+  main .contact-s1 p {
+    font-size: 17px;
+  }
 }
 main .contact-s1 .secondary-div {
   display: flex;
@@ -1143,6 +1166,11 @@ main .contact-s1 input[type=text] {
     margin-top: 40px;
   }
 }
+@media (max-width: 480px) {
+  main .contact-s1 input[type=text] {
+    width: 195px;
+  }
+}
 main .contact-s1 input[name=phone] {
   font-family: "ALK Rounded Nusx Med", sans-serif;
   width: 589px;
@@ -1150,6 +1178,11 @@ main .contact-s1 input[name=phone] {
   border: 2px solid #dce1e9;
   background: #fff;
   margin-top: 15px;
+}
+@media (max-width: 480px) {
+  main .contact-s1 input[name=phone] {
+    width: 420px;
+  }
 }
 main .contact-s1 textarea {
   width: 589px;
@@ -1164,6 +1197,11 @@ main .contact-s1 textarea {
   resize: none;
   padding-left: 20px;
   padding-top: 20px;
+}
+@media (max-width: 480px) {
+  main .contact-s1 textarea {
+    width: 420px;
+  }
 }
 main .contact-s1 input[type=checkbox] {
   width: 25px;
@@ -1194,10 +1232,18 @@ main .contact-s1 button {
   width: 620px;
   height: 60px;
 }
+@media (max-width: 480px) {
+  main .contact-s1 button {
+    width: 420px;
+  }
+}
 main .contact-s2 {
   padding-top: 150px;
   padding-bottom: 150px;
   background: #f5f8fc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 main .contact-s2 .main-div {
   display: flex;
@@ -1212,6 +1258,16 @@ main .contact-s2 h1 {
   font-weight: 700;
   padding-bottom: 25px;
 }
+@media (max-width: 768px) {
+  main .contact-s2 h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main .contact-s2 h1 {
+    font-size: 35px;
+  }
+}
 main .contact-s2 .yellow-line {
   width: 50px;
   height: 3px;
@@ -1219,33 +1275,98 @@ main .contact-s2 .yellow-line {
   margin: 0 auto;
 }
 main .contact-s2 p {
-  color: #969aa0;
+  color: #1b3764;
   font-family: "ALK Rounded Nusx Med", sans-serif;
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 400;
-  padding-top: 30px;
 }
 @media (max-width: 768px) {
   main .contact-s2 p {
     width: 450px;
   }
 }
+@media (max-width: 480px) {
+  main .contact-s2 p {
+    font-size: 18px;
+  }
+}
 main .contact-s2 .secondary-div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 50px;
-  justify-content: center;
-  width: 900px;
+  width: 550px;
   gap: 30px;
-  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  main .contact-s2 .secondary-div {
+    justify-content: center;
+  }
 }
 main .contact-s2 .third-div {
   display: flex;
   align-items: baseline;
 }
+main .contact-s2 .fourth-div {
+  display: flex;
+  align-items: baseline;
+}
+main .contact-s2 .fifth-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}
+@media (max-width: 768px) {
+  main .contact-s2 .fifth-div {
+    margin-left: -70px;
+    padding-top: 30px;
+    gap: 30px;
+  }
+}
+main .contact-s2 .contact-div {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  main .contact-s2 .contact-div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  main .contact-s2 .contact-div {
+    width: 570px;
+  }
+}
 main .contact-s2 i {
   padding-right: 15px;
+}
+main .contact-s2 span {
+  color: #969aa0;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 34.2px */
+  letter-spacing: -0.19px;
+  display: inline-block;
+  width: 500px;
+  height: 96px;
+  flex-shrink: 0;
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-bottom: 35px;
+}
+@media (max-width: 480px) {
+  main .contact-s2 span {
+    font-size: 15px;
+    width: 400px;
+    padding-bottom: 0px;
+  }
+}
+main .contact-s2 #column {
+  flex-direction: column;
 }
 
 footer {
